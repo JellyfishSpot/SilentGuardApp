@@ -11,7 +11,8 @@ Must have Material UI installed
 `npm install @mui/material @emotion/react @emotion/styled`  
 Android Studio installed to emulate android  
 
-#
-In order to view the app while developing, the developer must have run the app on their local machine using `npm start`. This allows anychanges to appear on the app after every local save.
+##
+In order to view the app while developing, the developer must have run the app on their local machine using `npm start`. This allows anychanges to appear on the app after every local save. `npm install` to install all current dependencies
 
-hello
+## Interactions with Device
+Changing the state of the settings should send values to the Arduino listening through bluetooth. Implementation of vibration patterns and intensity is done on the device side. Update model would send a Request to server to update but has timeout as a placeholder. Any events flagged by the machine learning model should populate the table in the notifications tab. Dummy data as placeholder currently.

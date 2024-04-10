@@ -4,13 +4,14 @@ import CircularProgress from "@mui/material/CircularProgress";
 
 import { Text, View } from './Themed';
 
-import Colors from '@/constants/Colors';
-
 export default function UpdateButtonScreen() {
   const [loading, setLoading] = useState(false);
   if(loading){
+    //TODO: Connect Application Logic to Button
     return (
-      <CircularProgress /> //TODO: Connect Application Logic to Button
+      <View>
+        <CircularProgress/> 
+      </View>
     )
   }
   return (
