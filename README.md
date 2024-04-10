@@ -13,3 +13,5 @@ Android Studio installed to emulate android
 
 #
 In order to view the app while developing, the developer must have run the app on their local machine using `npm start`. This allows anychanges to appear on the app after every local save.
+
+hello
