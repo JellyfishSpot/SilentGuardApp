@@ -3,5 +3,13 @@ Example companion app for BME 261L semester project. Provides a way for user to 
 
 ## Requirements for developers
 Must have Node.js installed (v20.12.1)  
-Must have React installed
+Must have React installed  
+`npm install -g create-react-app`  
+Must have expo installed  
+`npm install expo`  
+Must have Material UI installed  
+`npm install @mui/material @emotion/react @emotion/styled`  
 Android Studio installed to emulate android  
+
+#
+In order to view the app while developing, the developer must have run the app on their local machine using `npm start`. This allows anychanges to appear on the app after every local save.

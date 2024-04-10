@@ -1,15 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Pressable, StyleSheet } from 'react-native';
+import CircularProgress from "@mui/material/CircularProgress";
 
-import { MonoText } from './StyledText';
 import { Text, View } from './Themed';
 
 import Colors from '@/constants/Colors';
 
-export default function UpdateButtonScreen({ path }: { path: string }) {
+export default function UpdateButtonScreen() {
+  const [loading, setLoading] = useState(false);
+  if(loading){
+    return (
+      <CircularProgress /> //TODO: Connect Application Logic to Button
+    )
+  }
   return (
     <View style={styles.getStartedContainer}>
-      <Pressable style={styles.button} onPress={clickMe}>
+      <Pressable style={styles.button} onPress={() => {
+        setLoading(true);
+        setTimeout(() => setLoading(false), 2000)}
+      }>
         <Text style={styles.buttonText}>Update foo!</Text>
       </Pressable>
     </View>
@@ -38,8 +47,3 @@ const styles = StyleSheet.create({
     color: 'white',
   },
 });
-
-// TODO: Implement link to loading page
-function clickMe() {
-  alert("You clicked me!");
-}
