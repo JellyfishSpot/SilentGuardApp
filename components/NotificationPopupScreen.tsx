@@ -53,8 +53,8 @@ export default function NotificationPopupScreen() {
                 height: "30px"
                 }}
             >
-                <TableCell>Date</TableCell>
-                <TableCell>Events</TableCell>
+                <TableCell style={styles.headerText}>Date</TableCell>
+                <TableCell style={styles.headerText}>Events</TableCell>
             </TableRow>
             </TableHead>
         </Table>
@@ -66,10 +66,10 @@ export default function NotificationPopupScreen() {
                 return (
                 <TableRow key={i} style = {{backgroundColor: "#C7FFD5"}}>
                     <TableCell>
-                        <Text>04/{30-i}/2024</Text>
+                        <Text style={styles.rowText}>04/{30-i}/2024</Text>
                     </TableCell>
                     <TableCell>
-                        <Text>{n}</Text>
+                        <Text style={styles.rowText}>{n}</Text>
                     </TableCell>
                 </TableRow>
                 );
@@ -82,21 +82,14 @@ export default function NotificationPopupScreen() {
 }
 
 const styles = StyleSheet.create({
-  getStartedContainer: {
-    alignItems: 'center',
-    marginHorizontal: 50,
-  },
-  homeScreenFilename: {
-    marginVertical: 7,
-  },
-  codeHighlightContainer: {
-    borderRadius: 3,
-    paddingHorizontal: 4,
-  },
-  getStartedText: {
+  headerText: {
     fontSize: 17,
-    lineHeight: 24,
+    fontWeight: 'bold',
     textAlign: 'center',
+  },
+  rowText: {
+    fontSize: 14,
+    textAlign: 'center'
   },
   helpContainer: {
     marginTop: 15,
