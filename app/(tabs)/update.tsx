@@ -1,14 +1,14 @@
 import { StyleSheet } from 'react-native';
 
-import EditScreenInfo from '@/components/EditScreenInfo';
+import UpdateButtonScreen from '@/components/UpdateButtonScreen';
 import { Text, View } from '@/components/Themed';
 
-export default function TabOneScreen() {
+export default function TabThreeScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
+      <Text style={styles.title}>Update ML Model</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="app/(tabs)/index.tsx" />
+      <UpdateButtonScreen path="app/(tabs)/update.tsx" />
     </View>
   );
 }
@@ -27,5 +27,14 @@ const styles = StyleSheet.create({
     marginVertical: 30,
     height: 1,
     width: '80%',
+  },
+  button: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 12,
+    paddingHorizontal: 32,
+    borderRadius: 4,
+    elevation: 3,
+    backgroundColor: 'black',
   },
 });
