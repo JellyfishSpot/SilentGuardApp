@@ -7,10 +7,11 @@ import { Text, View } from './Themed';
 
 import Colors from '@/constants/Colors';
 import IntensitySlider from './IntensitySlider';
+import PatternSlider from './PatternSlider';
 
 export default function SettingScreen({ path }: { path: string }) {
   return (
-    <View style={{flex:1}}>
+    <View style={{width:'60%'}}>
       <View style={styles.subtitleContainer}>
         <Text
           style={styles.subTitle}
@@ -19,8 +20,15 @@ export default function SettingScreen({ path }: { path: string }) {
           Vibration Intensity
         </Text> 
         </View>
-        <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
         <IntensitySlider></IntensitySlider>
+        <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+        <Text
+          style={styles.subTitle}
+          lightColor="rgba(0,0,0,0.8)"
+          darkColor="rgba(255,255,255,0.8)">
+          Vibration Pattern
+        </Text> 
+        <PatternSlider></PatternSlider>
     </View>
   );
 }
