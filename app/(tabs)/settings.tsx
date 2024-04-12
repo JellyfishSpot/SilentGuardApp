@@ -1,14 +1,11 @@
 import { StyleSheet } from 'react-native';
 
-import EditScreenInfo from '@/components/EditScreenInfo';
+import SettingScreen from '@/components/EditScreenInfo';
 import { Text, View } from '@/components/Themed';
-import IntensitySlider from '@/components/IntensitySlider';
-import SettingScreen from '@/components/SettingScreen';
 
 export default function TabTwoScreen() {
   return (
     <View style={styles.container}>
-            
       <SettingScreen path="app/(tabs)/settings.tsx" />
     </View>
   );

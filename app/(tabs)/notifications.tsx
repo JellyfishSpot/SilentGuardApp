@@ -5,10 +5,11 @@ import { Text, View } from '@/components/Themed';
 
 export default function TabOneScreen() {
   return (
-    <View style={styles.container}>
+    <View>
       <Text style={styles.title}>Past 30 Days</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <NotificationPopupScreen/>
+      <View style={styles.container}>
+        <NotificationPopupScreen/>
+      </View>
     </View>
   );
 }
@@ -20,12 +21,9 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
   },
   title: {
-    fontSize: 20,
+    fontSize: 30,
     fontWeight: 'bold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
+    textAlign: 'left',
+    padding: 20
   },
 });
