@@ -11,10 +11,11 @@ export default function PatternSlider() {
       <RadioGroup
         row
         aria-labelledby="demo-row-radio-buttons-group-label"
+        defaultValue="Staccato"
         name="row-radio-buttons-group"
       >
-        <FormControlLabel value="female" control={<Radio />} label="Staccato" />
-        <FormControlLabel value="male" control={<Radio />} label="Swing" />
+        <FormControlLabel value="Staccato" control={<Radio />} label="Staccato (default)" />
+        <FormControlLabel value="Swing" control={<Radio />} label="Swing" />
       </RadioGroup>
     </FormControl>
   );
