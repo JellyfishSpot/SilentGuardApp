@@ -11,7 +11,7 @@ import PatternSlider from './PatternSlider';
 
 export default function SettingScreen({ path }: { path: string }) {
   return (
-    <View style={{width:'60%'}}>
+    <View style={{width:'40%'}}>
       <View style={styles.subtitleContainer}>
         <Text
           style={styles.subTitle}
