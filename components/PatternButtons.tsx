@@ -9,10 +9,14 @@ export default function PatternSlider() {
   return (
     <FormControl>
       <RadioGroup
+        // Make a row containing two radio buttons
         row
         aria-labelledby="demo-row-radio-buttons-group-label"
+        // Set a default value for vibration pattern
         defaultValue="Staccato"
         name="row-radio-buttons-group"
+
+        // define the two vibration patterns
       >
         <FormControlLabel value="Staccato" control={<Radio />} label="Staccato (default)" />
         <FormControlLabel value="Swing" control={<Radio />} label="Swing" />

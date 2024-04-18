@@ -7,32 +7,34 @@ import { Text, View } from './Themed';
 
 import Colors from '@/constants/Colors';
 import IntensitySlider from './IntensitySlider';
-import PatternSlider from './PatternSlider';
+import PatternButtons from './PatternButtons';
 
 export default function SettingScreen({ path }: { path: string }) {
   return (
+    
     <View style={{width:'40%'}}>
       <View style={styles.subtitleContainer}>
-        <Text
+        <Text // Make a slider for vibration intensity setting with discrete values
           style={styles.subTitle}
-          lightColor="rgba(0,0,0,0.8)"
+          lightColor="rgba(0,0,0,0.8)" 
           darkColor="rgba(255,255,255,0.8)">
           Vibration Intensity
         </Text> 
         </View>
         <IntensitySlider></IntensitySlider>
         <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-        <Text
+        <Text // Make radio buttons for vibration pattern setting
           style={styles.subTitle}
           lightColor="rgba(0,0,0,0.8)"
           darkColor="rgba(255,255,255,0.8)">
           Vibration Pattern
         </Text> 
-        <PatternSlider></PatternSlider>
+        <PatternButtons></PatternButtons>
     </View>
   );
 }
 
+// Define the views used
 const styles = StyleSheet.create({
     subtitleContainer: {
     alignItems: 'flex-start',

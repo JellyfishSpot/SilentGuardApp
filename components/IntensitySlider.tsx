@@ -4,6 +4,7 @@ import Slider from "@mui/material/Slider";
 
 export default function IntensitySlider() {
     return (
+        // Make a slider with 3 discrete levels
         <Slider
         defaultValue={2}
         valueLabelDisplay="auto"
